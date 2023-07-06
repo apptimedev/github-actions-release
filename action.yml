@@ -1,0 +1,24 @@
+name: "Github Release"
+author: "Apptime Developers"
+branding:
+  icon: "git-branch"
+  color: "gray-dark"
+description: "Publish Github releases from an action"
+
+inputs:
+  version:
+    description: "The version of the release to publish"
+    required: true
+    
+  description:
+    description: "The description of the release to publish"
+    required: true
+
+runs:
+  using: 'composite'
+  steps:      
+    - run: $GITHUB_ACTION_PATH/entrypoint.sh
+      shell: bash
+      env:
+        INPUT_VERSION: ${{ inputs.version }}
+        INPUT_DESCRIPTION: ${{ inputs.description }}

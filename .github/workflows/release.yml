@@ -1,0 +1,22 @@
+
+name: Release
+on: 
+  push:
+    branches: [ main ]
+    tags-ignore:
+      - '*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - run: echo VERSION=$((${{ github.run_number }})) >> $GITHUB_ENV
+
+    - uses: actions/checkout@v3
+    - name: Create a Release
+      uses: apptimedev/github-actions-release@main
+      env:
+        GITHUB_TOKEN: ${{ github.token }}
+      with:
+        version: v${{ env.VERSION }}
+        description: Release version - ${{ env.VERSION }}
