@@ -1,4 +1,5 @@
-# github-actions-release
+# GitHub Actions Release
+## apptimedev/github-actions-release
 
 [![Actions Status](https://github.com/apptimedev/github-actions-release/workflows/Release/badge.svg)](https://github.com/apptimedev/github-actions-release/actions)
 
