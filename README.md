@@ -2,9 +2,19 @@
 
 [![Actions Status](https://github.com/apptimedev/github-actions-release/workflows/Release/badge.svg)](https://github.com/apptimedev/github-actions-release/actions)
 
+[![Apptime](https://apptime.dev/icons/icon-128x128.png)](https://apptime.dev)
+
 Creates a GitHub Release with GitHub Actions.
 
-## Usage
+* [Install](#install)
+* [Examples](#examples)
+* [License](#license)
+
+## Install
+
+Activate GitHub Actions in your repository.
+
+## Examples
 
 ```yaml
 name: Publish Release
@@ -25,3 +35,7 @@ jobs:
           version: v1.0.0
           description: My Release
 ```
+
+## License
+
+BSD licensed. See the LICENSE file for details.
